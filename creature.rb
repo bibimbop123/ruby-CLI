@@ -21,6 +21,7 @@ class FantasyCreatureGenerator
     else
       "Mysterious powers"
     end
+    
   end
 
   def generate_food
@@ -34,8 +35,11 @@ class FantasyCreatureGenerator
       when "Earth"
         "Roots and Trees"
       else
-        "Mystery food"
+        puts "What does this creature eat?"
+        food = gets.chomp.to_s
     end
+
+
   end
 
   def describe_creature
