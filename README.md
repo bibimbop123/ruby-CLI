@@ -1,5 +1,1 @@
-# ruby-cli-template
-
-Use this repository as a template for your Ruby CLI (command line interface) project.
-
-- Ruby version: `3.2.1`
+Created a Command Line Interface app to generate fanstasy creature! First begin by submitting your favorite food!
