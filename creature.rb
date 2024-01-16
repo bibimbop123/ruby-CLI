@@ -19,7 +19,8 @@ class FantasyCreatureGenerator
     when "Earth"
       "Can manipulate the earth"
     else
-      "Mysterious powers"
+      puts "What is this creature's special ability?"
+      gets.chomp.to_s
     end
     
   end
@@ -36,10 +37,10 @@ class FantasyCreatureGenerator
         "Roots and Trees"
       when "Focusing"
         puts "What is Brian's favorite food?"
-        food = gets.chomp.to_s
+        @food = gets.chomp.to_s
       else
         puts "What does this creature eat?"
-        food = gets.chomp.to_s
+        gets.chomp.to_s
     end
 
 
