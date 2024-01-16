@@ -18,6 +18,9 @@ class FantasyCreatureGenerator
       "Invisible and can fly"
     when "Earth"
       "Can manipulate the earth"
+    when "Focusing"
+      puts "What is Brian's special ability?"
+      gets.chomp.to_s
     else
       puts "What is this creature's special ability?"
       gets.chomp.to_s
