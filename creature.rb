@@ -34,6 +34,9 @@ class FantasyCreatureGenerator
         "Fruit and insects"
       when "Earth"
         "Roots and Trees"
+      when "Focusing"
+        puts "What is Brian's favorite food?"
+        food = gets.chomp.to_s
       else
         puts "What does this creature eat?"
         food = gets.chomp.to_s
