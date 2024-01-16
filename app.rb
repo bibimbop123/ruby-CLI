@@ -7,7 +7,7 @@ golem = FantasyCreatureGenerator.new("Golem", "Earth")
 brian = FantasyCreatureGenerator.new("Brian", "Focusing")
 print "Input a creature type: "
 creature_type = gets.chomp.to_s
-print "Input an element: "
+print "Input an creature's element: "
 element = gets.chomp.to_s.downcase.capitalize
 user_creature = FantasyCreatureGenerator.new(creature_type, element)
 
