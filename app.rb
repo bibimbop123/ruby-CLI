@@ -4,7 +4,7 @@ fire_dragon = FantasyCreatureGenerator.new("Dragon", "Fire")
 water_nymph = FantasyCreatureGenerator.new("Nymph", "Water")
 invisible_spirit = FantasyCreatureGenerator.new("Spirit", "Air")
 golem = FantasyCreatureGenerator.new("Golem", "Earth")
-brian = FantasyCreatureGenerator.new("Brian", "Focusing")
+brian = FantasyCreatureGenerator.new("Brian", "Friendship")
 print "Input a creature type: "
 creature_type = gets.chomp.to_s
 print "Input an creature's element: "

@@ -18,7 +18,7 @@ class FantasyCreatureGenerator
       "Invisible and can fly"
     when "Earth"
       "Can manipulate the earth"
-    when "Focusing"
+    when "Friendship"
       puts "What is Brian's special ability?"
       gets.chomp.to_s
     else
@@ -38,7 +38,7 @@ class FantasyCreatureGenerator
         "Fruit and insects"
       when "Earth"
         "Roots and Trees"
-      when "Focusing"
+      when "Friendship"
         puts "What is Brian's favorite food?"
         @food = gets.chomp.to_s
       else
