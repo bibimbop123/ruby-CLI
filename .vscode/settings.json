@@ -17,27 +17,25 @@
   "workbench.tree.renderIndentGuides": "always",
   "files.autoSaveDelay": 500,
   "files.exclude": {
-    "**/.git": true,
-    ".vscode": true,
     ".bundle": true,
-    ".gitignore": true,
+    ".devcontainer/": true,
     ".gitpod.yml": true,
     ".rspec": true,
-    ".devcontainer/": true,
+    ".vscode": true,
+    "**/.git": true,
+    "app.rb": false,
     "config.ru": false,
+    "config/": false,
     "Dockerfile": false,
+    "environment.rb": false,
+    "examples.txt": true,
     "Gemfile": false,
     "Gemfile.lock": false,
-    "tmp/": true,
     "install-packages": true,
     "main.rb": false,
     "README.md": false,
-    "app.rb": false,
-    "environment.rb": false,
-    "bin/": true,
     "spec/": true,
-    "examples.txt": true,
-    "config/": false
+    "tmp/": true
   },
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
@@ -69,5 +67,9 @@
   },
   "files.associations": {
     "*.html.erb": "erb"
+  },
+  "search.useIgnoreFiles": true,
+  "search.exclude": {
+    "**/node_modules": false
   }
 }
