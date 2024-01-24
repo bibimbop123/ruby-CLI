@@ -19,7 +19,7 @@ class Game
     user_creature = FantasyCreatureGenerator.new
     print "Input the creature's power level: "
     power = gets.chomp.to_i
-    print "Input the creature's toughness: "
+    print "Input the creature's toughness level: "
     toughness = gets.chomp.to_i
 
     user_creature.setup(creature_type, element, power, toughness)
