@@ -1,11 +1,14 @@
 class FantasyCreatureGenerator
-  attr_accessor :creature_type, :element, :special_ability, :food
+  attr_accessor :creature_type, :element, :special_ability, :food, :power, :toughness
+ 
 
-  def initialize(creature_type, element)
+  def setup(creature_type, element, power, toughness)
     @creature_type = creature_type
     @element = element
     @special_ability = generate_special_ability
     @food = generate_food
+    @power = power
+    @toughness = toughness
   end
 
   def generate_special_ability
@@ -50,6 +53,6 @@ class FantasyCreatureGenerator
   end
 
   def describe_creature
-    puts "#{@creature_type} with an affinity for #{@element} loves #{@food}. Special ability: #{@special_ability}"
+    puts "#{@creature_type} with an affinity for #{@element} loves #{@food}. Special ability: #{@special_ability}. this creature has #{@power} power and #{@toughness} toughness."
   end
 end

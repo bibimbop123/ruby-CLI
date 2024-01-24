@@ -1,20 +1,25 @@
+require_relative 'game'
 require_relative 'creature'
 
-fire_dragon = FantasyCreatureGenerator.new("Dragon", "Fire")
-water_nymph = FantasyCreatureGenerator.new("Nymph", "Water")
-invisible_spirit = FantasyCreatureGenerator.new("Spirit", "Air")
-golem = FantasyCreatureGenerator.new("Golem", "Earth")
-brian = FantasyCreatureGenerator.new("Brian", "Friendship")
-print "Input a creature type: "
-creature_type = gets.chomp.to_s
-print "Input an creature's element: "
-element = gets.chomp.to_s.downcase.capitalize
-user_creature = FantasyCreatureGenerator.new(creature_type, element)
+game = Game.new
 
+fire_dragon = FantasyCreatureGenerator.new
+fire_dragon.setup("Dragon", "Fire", 10, 10)
 
-fire_dragon.describe_creature
-water_nymph.describe_creature
-invisible_spirit.describe_creature
-golem.describe_creature
-brian.describe_creature
-user_creature.describe_creature
+water_nymph = FantasyCreatureGenerator.new
+water_nymph.setup("Nymph", "Water", 5, 5)
+
+invisible_spirit = FantasyCreatureGenerator.new
+invisible_spirit.setup("Spirit", "Air", 3, 3)
+
+golem = FantasyCreatureGenerator.new
+golem.setup("Golem", "Earth", 8, 8)
+
+brian = FantasyCreatureGenerator.new
+brian.setup("Brian", "Friendship", Float::INFINITY, Float::INFINITY)
+
+[fire_dragon, water_nymph, invisible_spirit, golem, brian].each do |creature|
+  game.add_creature(creature)
+end
+
+game.start_game
