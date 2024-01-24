@@ -51,8 +51,7 @@ class FantasyCreatureGenerator
 
 
   end
-
   def describe_creature
-    puts "#{@creature_type} with an affinity for #{@element} loves #{@food}. Special ability: #{@special_ability}. this creature has #{@power} power and #{@toughness} toughness."
+    "#{@creature_type} with an affinity for #{@element} loves #{@food}. Special ability: #{@special_ability}. this creature has #{@power} power and #{@toughness} toughness."
   end
 end

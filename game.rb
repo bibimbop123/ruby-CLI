@@ -24,10 +24,14 @@ class Game
 
     user_creature.setup(creature_type, element, power, toughness)
 
-    add_creature(user_creature)
+    self.add_creature(user_creature)
 
-    @fantasyCreatures.each do |creature|
-    creature.describe_creature
     end 
+
+    def describe_creatures
+      @fantasyCreatures.each do |creature|
+        puts creature.describe_creature
+      end
+      
   end
 end

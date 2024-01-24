@@ -1,9 +1,24 @@
 require 'minitest/autorun'
-require_relative 'game'
+require './game'
+require './creature'
 
-class GameTest < Minitest::Test
-  def test_game_setup
-    game = Game.new
-    assert_equal 2, game.fantasyCreatures.length
+class TestGame < Minitest::Test
+  def setup
+    @game = Game.new
+    @fire_dragon = FantasyCreatureGenerator.new
+    @fire_dragon.setup("Dragon", "Fire", 10, 10)
+    @water_nymph = FantasyCreatureGenerator.new
+    @water_nymph.setup("Nymph", "Water", 5, 5)
+  end
+
+  def test_initialize
+    assert_equal [], @game.fantasyCreatures
+  end
+
+  def test_add_creature
+    @game.add_creature(@fire_dragon)
+    assert_equal [@fire_dragon], @game.fantasyCreatures
+    @game.add_creature(@water_nymph)
+    assert_equal [@fire_dragon, @water_nymph], @game.fantasyCreatures
   end
 end
